@@ -1,0 +1,10 @@
+version: '3.7'
+
+services: # serveurs
+  mysql:
+    image: mysql:latest
+    restart: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    volumes: 
+     - ./ADMIN_BDD_mysql:/var/lib/mysql
